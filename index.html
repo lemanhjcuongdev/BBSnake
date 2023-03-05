@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBSnake</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="information">
+        <span class="score">Score: 0</span>
+        <span class="currSpeed">Speed: 186ms/step</span>
+        <span class="h_score">Highest Score: 0</span>
+      </div>
+      <div class="playground"></div>
+      <div class="mobile_controls">
+        <div class="top part">
+          <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
+        </div>
+        <div class="middle part">
+          <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
+          <i data-key="BtnPause" class="fa-solid fa-pause active"></i>
+          <i data-key="BtnPlay" class="fa-solid fa-play active"></i>
+          <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
+        </div>
+        <div class="bottom part">
+          <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
