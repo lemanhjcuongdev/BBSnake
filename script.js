@@ -25,6 +25,7 @@ const randomFoodPosition = () => {
   foodX = Math.floor(Math.random() * 30) + 1;
   foodY = Math.floor(Math.random() * 30) + 1;
   // plus 1 because 0-30 random number and floor round number down
+  console.log(Math.floor(Math.random() * 3) + 1);
 };
 const randomSnakePosition = () => {
   snakeX = Math.floor(Math.random() * 30) + 1;
@@ -113,7 +114,6 @@ const initGame = () => {
   for (let i = 0; i < snakeLength.length; i++) {
     eatenFood = snakeLength[i];
     html += `<div class="snake_head" style="grid-area: ${eatenFood[1]} / ${eatenFood[0]}">
-      <div class="eyes">8</div>
     </div>`;
     //check rắn tự hủy, trong mảng snakeLength[X,Y] gọi phần tử đầu tiên (0) là đầu, phần tử tiếp theo (1) là cổ.
     //Nếu (tọa độ X của đầu, tọa độ Y của cổ) === (tọa độ X của phần rắn ăn vào, tọa độ Y của phần cổ) && (tọa độ X của đầu, tọa độ Y của đầu) === (tọa độ X của phần rắn ăn vào, tọa độ Y của đầu) thì die
