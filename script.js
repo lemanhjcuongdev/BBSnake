@@ -4,6 +4,9 @@ const score = document.querySelector(".score");
 const h_score = document.querySelector(".h_score");
 const mobile_controls = document.querySelectorAll(".mobile_controls .part i");
 
+const btnPause = document.querySelector(".fa-solid.fa-pause");
+const btnPlay = document.querySelector(".fa-solid.fa-play");
+
 let foodX, foodY;
 let snakeX, snakeY;
 let directionX = 0,
@@ -42,12 +45,16 @@ const control = (e) => {
   } else if (e.key === "ArrowRight" && directionX !== -1) {
     directionX = 1;
     directionY = 0;
-  } else if (e.key === "BtnPlay") {
+  } else if (e.key === "BtnPlay" && isPaused == true) {
     currentSpeed = setInterval(initGame, speed);
     isPaused = false;
-  } else if (e.key === "BtnPause") {
+    btnPlay.classList.remove("active");
+    btnPause.classList.add("active");
+  } else if (e.key === "BtnPause" && isPaused == false) {
     clearInterval(currentSpeed);
     isPaused = true;
+    btnPause.classList.remove("active");
+    btnPlay.classList.add("active");
   }
 };
 
